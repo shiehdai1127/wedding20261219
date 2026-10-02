@@ -97,11 +97,9 @@
 </head>
 <body class="antialiased selection:bg-[#d4a373]/20 selection:text-[#d4a373]">
 
-  <!-- Top Glassmorphism Navigation Bar -->
   <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-[#d4a373]/20 px-4 py-3 md:px-8 transition-all duration-300">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       
-      <!-- Left Branding & Slogan Keyword -->
       <div class="flex items-center space-x-3">
         <a href="#hero" class="text-lg md:text-xl font-semibold tracking-wider text-[#3d3834] flex items-center gap-1.5 hover:text-[#d4a373] transition">
           <span>淵隆</span>
@@ -113,7 +111,6 @@
         </span>
       </div>
 
-      <!-- Right Navigation Links -->
       <div class="flex items-center space-x-5 md:space-x-8 text-xs md:text-sm tracking-widest font-medium text-[#3d3834]">
         <a href="#details" class="hover:text-[#d4a373] transition-colors duration-200">婚禮詳情</a>
         <a href="#transport" class="hover:text-[#d4a373] transition-colors duration-200">交通指南</a>
@@ -123,7 +120,6 @@
     </div>
   </nav>
 
-  <!-- Hero Cover Section -->
   <section id="hero" class="relative w-full min-h-screen flex items-end justify-center pb-6 md:pb-12 pt-20 overflow-hidden">
     <div class="absolute inset-0 z-0 bg-[#3d3834]">
       <img 
@@ -166,7 +162,6 @@
     </div>
   </section>
 
-  <!-- Artistic Countdown Timer Section -->
   <section class="py-12 md:py-16 px-4 bg-gradient-to-b from-[#faf8f5] via-[#f3ece1]/40 to-[#faf8f5]">
     <div class="max-w-4xl mx-auto text-center space-y-6">
       <div class="space-y-1">
@@ -202,7 +197,6 @@
     </div>
   </section>
 
-  <!-- Wedding Details (Vertical V-Card Design) -->
   <section id="details" class="py-16 md:py-24 px-4 bg-[#f3ece1]/30">
     <div class="max-w-4xl mx-auto space-y-8 md:space-y-10">
       
@@ -212,7 +206,7 @@
         <p class="text-xs text-[#8da399] tracking-widest">2026 年 12 月 19 日 (星期六)</p>
       </div>
 
-      <!-- Prominent Main Banquet Notice Box -->
+      <!-- Prominent Banquet Notice -->
       <div class="bg-amber-50/90 border border-[#d4a373]/50 rounded-2xl p-4 md:p-5 text-center shadow-sm max-w-2xl mx-auto space-y-1.5">
         <div class="inline-flex items-center gap-2 text-[#d4a373] font-semibold text-sm md:text-base tracking-wider">
           <i class="fa-solid fa-utensils"></i>
@@ -223,10 +217,10 @@
         </p>
       </div>
 
-      <!-- V-Card Grid Layout -->
+      <!-- Details Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
         
-        <!-- Ceremony V-Card -->
+        <!-- Ceremony -->
         <div class="bg-white rounded-3xl p-8 shadow-soft-glow border border-[#d4a373]/20 flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-[#d4a373]/50 transition duration-300">
           <div class="absolute top-0 left-0 w-2 h-full bg-[#d4a373]/60"></div>
           
@@ -266,7 +260,7 @@
           </a>
         </div>
 
-        <!-- Lunch Banquet V-Card -->
+        <!-- Banquet -->
         <div class="bg-white rounded-3xl p-8 shadow-soft-glow border-2 border-[#8da399]/60 flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-[#8da399] transition duration-300">
           <div class="absolute top-0 left-0 w-2 h-full bg-[#8da399]"></div>
 
@@ -311,7 +305,6 @@
     </div>
   </section>
 
-  <!-- Transportation Guide -->
   <section id="transport" class="py-16 md:py-24 px-4 max-w-3xl mx-auto">
     <div class="text-center space-y-2 mb-10">
       <span class="font-en text-xs tracking-[0.3em] text-[#d4a373] uppercase">Transportation</span>
@@ -425,7 +418,6 @@
     </div>
   </section>
 
-  <!-- RSVP Form Section -->
   <section id="rsvp" class="py-16 md:py-24 px-4 bg-gradient-to-b from-[#faf8f5] via-white to-[#faf8f5]">
     <div class="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-float border border-[#d4a373]/30 relative">
       
@@ -438,7 +430,7 @@
       <!-- Hidden Iframe Target for Form Submission -->
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { showSuccessModal(); }"></iframe>
 
-      <!-- Form pointing directly to Google Form Response URL -->
+      <!-- Form pointing to Google Form Response URL -->
       <form 
         id="wedding_rsvp_form"
         action="https://docs.google.com/forms/d/e/1FAIpQLSdq06CZnNZ7lqYTijFTZc6ZMEJRsBeVaCzqAsCKh45WNo2Kdg/formResponse" 
@@ -475,7 +467,7 @@
           >
         </div>
 
-        <!-- 3. 與新人的關係 RELATIONSHIP (entry.2044940604) -->
+        <!-- 3. 您和新人的關係是？ RELATIONSHIP (entry.2044940604) -->
         <div class="space-y-1.5">
           <label class="block font-medium text-[#3d3834] tracking-wider text-xs md:text-sm">
             您和新人的關係是？ <span class="font-en font-normal text-[#8da399]">RELATIONSHIP</span> <span class="text-red-400">*</span>
@@ -500,7 +492,7 @@
           </select>
         </div>
 
-        <!-- Dynamic Attendance Details Block -->
+        <!-- Dynamic Attendance Details Block (Only shown when Attending) -->
         <div id="attending_details_block" class="hidden space-y-6 transition-all duration-300 p-5 rounded-2xl bg-[#f3ece1]/40 border border-[#d4a373]/20">
           
           <div class="bg-white/80 p-3 rounded-xl border border-[#d4a373]/30 text-xs text-[#3d3834]/90 flex items-center gap-2">
@@ -591,26 +583,28 @@
 
         </div>
 
-        <!-- 10. 喜帖發放方式 INVITATION TYPE (entry.371479292) -->
+        <!-- 10. 喜帖發放方式 INVITATION TYPE (entry.371479292) - 所有人皆可選 -->
         <div class="space-y-1.5">
           <label class="block font-medium text-[#3d3834] tracking-wider text-xs md:text-sm">
             喜帖發放方式 <span class="font-en font-normal text-[#8da399]">INVITATION TYPE</span> <span class="text-red-400">*</span>
           </label>
-          <select name="entry.371479292" required class="w-full px-4 py-3 rounded-xl custom-input text-[#3d3834]">
+          <select id="invitation_select" name="entry.371479292" required class="w-full px-4 py-3 rounded-xl custom-input text-[#3d3834]" onchange="handleInvitationChange(this.value)">
             <option value="" disabled selected>請選擇喜帖需求</option>
+            <option value="只要電子喜帖">只要電子喜帖</option>
+            <option value="只要紙本喜帖">只要紙本喜帖</option>
             <option value="電子喜帖+紙本喜帖">電子喜帖+紙本喜帖</option>
-            <option value="僅需電子喜帖即可">僅需電子喜帖即可</option>
-            <option value="僅需紙本喜帖">僅需紙本喜帖</option>
+            <option value="不需要喜帖">不需要喜帖</option>
           </select>
         </div>
 
         <!-- 11. 郵寄地址 / Email / 面交 (entry.2093466386) -->
-        <div class="space-y-1.5">
+        <div id="address_block" class="space-y-1.5">
           <label class="block font-medium text-[#3d3834] tracking-wider text-xs md:text-sm">
             郵寄地址 / Email / 面交 <span class="font-en font-normal text-[#8da399]">ADDRESS / EMAIL / HAND DELIVERY</span>
           </label>
           <input 
             type="text" 
+            id="address_input"
             name="entry.2093466386" 
             placeholder="請填寫紙本喜帖郵寄地址、電子郵件，或填寫『面交』" 
             class="w-full px-4 py-3 rounded-xl custom-input text-[#3d3834]"
@@ -644,7 +638,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="py-8 text-center text-xs text-[#8da399] tracking-widest border-t border-[#d4a373]/20">
     <p>蕭淵隆 ♡ 謝岱融 婚禮邀請函</p>
     <p class="mt-1 font-en">December 19, 2026 ． Frigga Garden</p>
@@ -720,6 +713,8 @@
         detailsBlock.classList.remove('hidden');
       } else {
         detailsBlock.classList.add('hidden');
+
+        // Clear banquet count fields when not attending
         document.getElementById('ceremony_count_input').value = '';
         document.getElementById('adult_count_input').value = '';
         document.getElementById('kids_count_input').value = '';
@@ -728,6 +723,18 @@
 
         document.getElementById('vegetarian_block').classList.add('hidden');
         document.getElementById('highchair_block').classList.add('hidden');
+      }
+    }
+
+    function handleInvitationChange(value) {
+      const addressBlock = document.getElementById('address_block');
+      const addressInput = document.getElementById('address_input');
+
+      if (value === "不需要喜帖") {
+        if (addressBlock) addressBlock.classList.add('hidden');
+        if (addressInput) addressInput.value = '';
+      } else {
+        if (addressBlock) addressBlock.classList.remove('hidden');
       }
     }
 
@@ -762,14 +769,15 @@
       const chairInput = document.getElementById('chair_count_input');
       const vegInput = document.getElementById('veg_count_input');
 
-      // 確保即使選「不參加」或「隱藏」，數字欄位也會送出 "0"，防護 Google 表單驗證阻檔
       if (attendanceVal !== "我要參加！一起見證幸福時刻") {
+        // If not attending, fill count fields as "0" automatically
         if (ceremonyInput) ceremonyInput.value = "0";
         if (adultInput) adultInput.value = "0";
         if (kidsInput) kidsInput.value = "0";
         if (chairInput) chairInput.value = "0";
         if (vegInput) vegInput.value = "0";
       } else {
+        // If attending but left blank, default count fields to "0"
         if (ceremonyInput && !ceremonyInput.value.trim()) ceremonyInput.value = "0";
         if (adultInput && !adultInput.value.trim()) adultInput.value = "0";
         if (kidsInput && !kidsInput.value.trim()) kidsInput.value = "0";
@@ -796,6 +804,7 @@
       if (form) {
         form.reset();
         handleAttendanceChange('');
+        handleInvitationChange('');
       }
     }
 
